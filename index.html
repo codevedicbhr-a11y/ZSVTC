@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZSVTC – An Unparallel Institute | Best Coaching in Bhagalpur</title>
+    <meta name="description" content="ZSVTC An Unparallel Institute - Premier coaching for Banking, SSC, Railway & Government exams in Bhagalpur. Founded by Shailendra Vijay (M.Sc. Electronics).">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #c8102e;
+            --primary-dark: #9a0c23;
+            --secondary: #1a1a2e;
+            --accent: #ffd700;
+            --light: #f8f9fa;
+            --dark: #0f0f1a;
+            --text: #333;
+            --text-light: #666;
+            --white: #ffffff;
+            --shadow: 0 10px 40px rgba(0,0,0,0.12);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+        }
+
+        header.scrolled {
+            background: rgba(15, 15, 26, 0.98);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.25);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 78px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 52px;
+            width: auto;
+            border-radius: 6px;
+        }
+
+        .logo-text {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            color: var(--accent);
+            font-size: 0.75rem;
+            display: block;
+            font-weight: 500;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.92rem;
+            padding: 8px 14px;
+            border-radius: 6px;
+            transition: all 0.25s ease;
+        }
+
+        nav a:hover, nav a.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .nav-cta {
+            background: var(--primary) !important;
+            color: var(--white) !important;
+            padding: 10px 20px !important;
+            border-radius: 50px !important;
+            font-weight: 600 !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--primary-dark) !important;
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .hamburger span {
+            width: 26px;
+            height: 3px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(15,15,26,0.92) 0%, rgba(26,26,46,0.88) 50%, rgba(200,16,46,0.75) 100%),
+                        url('images/41013844_2159377021007513_8738274507476697088_n.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 78px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(to top, var(--white), transparent);
+        }
+
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            color: var(--white);
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,215,0,0.15);
+            border: 1px solid rgba(255,215,0,0.4);
+            color: var(--accent);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            backdrop-filter: blur(8px);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 18px;
+            max-width: 720px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 12px;
+            max-width: 560px;
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            margin-bottom: 36px;
+            max-width: 520px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(200,16,46,0.4);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(200,16,46,0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.6);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--secondary);
+            border-color: var(--white);
+        }
+
+        .hero-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-top: 4px;
+        }
+
+        /* ========== SECTIONS COMMON ========== */
+        section {
+            padding: 90px 24px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: rgba(200,16,46,0.1);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.9rem, 4vw, 2.6rem);
+            color: var(--secondary);
+            margin-bottom: 14px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        /* ========== ABOUT ========== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .about-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15,15,26,0.4), transparent 50%);
+        }
+
+        .about-content h3 {
+            font-size: 1.6rem;
+            color: var(--secondary);
+            margin-bottom: 18px;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            font-size: 1.02rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .feature-box {
+            background: var(--light);
+            padding: 18px;
+            border-radius: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .feature-box i {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-top: 2px;
+        }
+
+        .feature-box h4 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            color: var(--secondary);
+        }
+
+        .feature-box p {
+            font-size: 0.85rem;
+            margin: 0;
+            color: var(--text-light);
+        }
+
+        /* ========== FOUNDER ========== */
+        .founder {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: var(--white);
+        }
+
+        .founder .section-badge {
+            background: rgba(255,215,0,0.15);
+            color: var(--accent);
+        }
+
+        .founder .section-header h2 {
+            color: var(--white);
+        }
+
+        .founder .section-header p {
+            color: rgba(255,255,255,0.75);
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .founder-photo {
+            position: relative;
+        }
+
+        .founder-photo img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+            border: 4px solid rgba(255,215,0,0.3);
+        }
+
+        .founder-badge {
+            position: absolute;
+            bottom: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            box-shadow: 0 8px 20px rgba(200,16,46,0.4);
+        }
+
+        .founder-info h3 {
+            font-size: 1.9rem;
+            margin-bottom: 6px;
+        }
+
+        .founder-info .designation {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .founder-info p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 16px;
+            font-size: 1.02rem;
+        }
+
+        .founder-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .highlight {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 14px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .highlight i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        /* ========== COURSES ========== */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+
+        .course-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.35s ease;
+            border: 1px solid #eee;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .course-icon {
+            height: 110px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            color: var(--white);
+        }
+
+        .course-body {
+            padding: 26px;
+        }
+
+        .course-body h3 {
+            font-size: 1.25rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+        }
+
+        .course-body p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+        }
+
+        .course-body ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .course-body li {
+            padding: 6px 0;
+            font-size: 0.9rem;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .course-body li i {
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
+        .course-btn {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.25s;
+        }
+
+        .course-btn:hover {
+            color: var(--primary-dark);
+            gap: 8px;
+        }
+
+        /* ========== GALLERY ========== */
+        .gallery {
+            background: var(--light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            height: 260px;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15,15,26,0.75), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay span {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ========== NEWS ========== */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .news-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .news-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .news-body {
+            padding: 24px;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .news-body h3 {
+            font-size: 1.15rem;
+            color: var(--secondary);
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .news-body p {
+            color: var(--text-light);
+            font-size: 0.92rem;
+        }
+
+        /* ========== CONTACT ========== */
+        .contact {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+            color: var(--white);
+        }
+
+        .contact .section-badge {
+            background: rgba(255,215,0,0.15);
+            color: var(--accent);
+        }
+
+        .contact .section-header h2 {
+            color: var(--white);
+        }
+
+        .contact .section-header p {
+            color: rgba(255,255,255,0.75);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(200,16,46,0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+
+        .contact-item p, .contact-item a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 14px;
+            margin-top: 12px;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius);
+            padding: 36px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-form h3 {
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.08);
+            color: var(--white);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all 0.25s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255,255,255,0.12);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.45);
+        }
+
+        .form-group select option {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 8px;
+        }
+
+        .form-submit:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(200,16,46,0.4);
+        }
+
+        /* ========== MAP ========== */
+        .map-section {
+            padding: 0;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 420px;
+            filter: grayscale(20%);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.75);
+            padding: 50px 24px 24px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand img {
+            height: 50px;
+            margin-bottom: 16px;
+            border-radius: 6px;
+        }
+
+        .footer-brand p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.92rem;
+            transition: color 0.25s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.88rem;
+        }
+
+        /* ========== FLOATING WHATSAPP ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 25px rgba(37,211,102,0.45);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse-wa 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37,211,102,0.6);
+        }
+
+        .whatsapp-float i {
+            font-size: 1.9rem;
+            color: var(--white);
+        }
+
+        @keyframes pulse-wa {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+            70% { box-shadow: 0 0 0 16px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
+        /* ========== POPUP MODAL ========== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.35s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--white);
+            border-radius: 16px;
+            max-width: 480px;
+            width: 100%;
+            padding: 36px;
+            position: relative;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.35s ease;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.active .modal {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 18px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: color 0.25s;
+        }
+
+        .modal-close:hover {
+            color: var(--primary);
+        }
+
+        .modal h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+        }
+
+        .modal > p {
+            color: var(--text-light);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .modal .form-group label {
+            color: var(--text);
+        }
+
+        .modal .form-group input,
+        .modal .form-group select,
+        .modal .form-group textarea {
+            background: var(--light);
+            border: 1px solid #ddd;
+            color: var(--text);
+        }
+
+        .modal .form-group input:focus,
+        .modal .form-group select:focus,
+        .modal .form-group textarea:focus {
+            border-color: var(--primary);
+            background: var(--white);
+        }
+
+        .modal .form-group input::placeholder,
+        .modal .form-group textarea::placeholder {
+            color: #999;
+        }
+
+        .modal .form-group select option {
+            background: var(--white);
+            color: var(--text);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 992px) {
+            .about-grid,
+            .founder-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 36px;
+            }
+
+            .founder-photo {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                position: fixed;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                background: var(--secondary);
+                flex-direction: column;
+                padding: 20px;
+                gap: 4px;
+                transform: translateY(-120%);
+                transition: transform 0.35s ease;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            }
+
+            nav ul.active {
+                transform: translateY(0);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-stats {
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 1.8rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 54px;
+                height: 54px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="images/Red White Black Competition Center Logo.png" alt="ZSVTC Logo">
+                <div class="logo-text">
+                    ZSVTC
+                    <span>An Unparallel Institute</span>
+                </div>
+            </a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#founder">Founder</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#news">In News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="nav-cta" onclick="openModal(); return false;">Enquire Now</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-trophy"></i> No.1 Competition Center in the Region
+            </div>
+            <h1>Shape Your Future with <span>ZSVTC</span></h1>
+            <p class="hero-tagline">An Unparallel Institute for Banking, SSC, Railway & Government Job Aspirants</p>
+            <p class="hero-sub">Expert guidance by Shailendra Vijay (M.Sc. Electronics) – Turning dreams into government jobs since years.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary" onclick="openModal(); return false;">
+                    <i class="fas fa-user-plus"></i> Admission Enquiry
+                </a>
+                <a href="#courses" class="btn btn-outline">
+                    <i class="fas fa-book-open"></i> Explore Courses
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">41+</div>
+                    <div class="stat-label">Bank Selections in One Batch</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Successful Students</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">ABOUT US</span>
+                <h2>Why Choose ZSVTC?</h2>
+                <p>Zenith Success Vision Training Centre – Committed to creating future officers and professionals</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="images/unnamed (3).webp" alt="Classroom at ZSVTC">
+                </div>
+                <div class="about-content">
+                    <h3>An Unparallel Institute for Competitive Excellence</h3>
+                    <p>ZSVTC (Zenith Success Vision Training Centre) is a premier coaching institute in Bhagalpur dedicated to preparing students for Banking, SSC, Railway, and other government competitive examinations.</p>
+                    <p>With a result-oriented approach, experienced faculty, and a proven track record of selections, we have established ourselves as the most trusted name for competitive exam preparation in the region.</p>
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <div>
+                                <h4>Expert Faculty</h4>
+                                <p>Subject specialists with years of experience</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-clipboard-check"></i>
+                            <div>
+                                <h4>Regular Mock Tests</h4>
+                                <p>Weekly & monthly test series</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-book"></i>
+                            <div>
+                                <h4>Study Material</h4>
+                                <p>Updated notes & practice booklets</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fas fa-user-graduate"></i>
+                            <div>
+                                <h4>Proven Results</h4>
+                                <p>Hundreds of government job selections</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOUNDER ========== -->
+    <section class="founder" id="founder">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">OUR FOUNDER</span>
+                <h2>Meet Shailendra Vijay</h2>
+                <p>The visionary who left his job to build futures</p>
+            </div>
+            <div class="founder-grid">
+                <div class="founder-photo">
+                    <img src="images/unnamed (2).webp" alt="Shailendra Vijay - Founder of ZSVTC">
+                    <div class="founder-badge">Founder & Director</div>
+                </div>
+                <div class="founder-info">
+                    <h3>Shailendra Vijay</h3>
+                    <p class="designation">M.Sc. in Electronics | Founder, ZSVTC</p>
+                    <p>Shailendra Vijay is a passionate educationist who sacrificed his government job (Sub-Auditor) in 1996 to dedicate his life to preparing young aspirants for competitive examinations.</p>
+                    <p>Under his guidance, students from small towns have secured prestigious positions in Banking Services, IPS, IAS pathways, and various central & state government departments. His students have made their mark across India.</p>
+                    <p>With a teaching philosophy rooted in conceptual clarity, disciplined practice, and personal mentoring, he continues to inspire thousands of students to achieve their dreams of serving the nation through government service.</p>
+                    <div class="founder-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-medal"></i>
+                            <span>Left job for teaching mission</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-users"></i>
+                            <span>1000+ successful alumni</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Featured in leading newspapers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== COURSES ========== -->
+    <section id="courses">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">OUR PROGRAMS</span>
+                <h2>Courses Offered</h2>
+                <p>Comprehensive coaching programs designed for complete exam success</p>
+            </div>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon"><i class="fas fa-university"></i></div>
+                    <div class="course-body">
+                        <h3>Banking Exams</h3>
+                        <p>Complete preparation for all major banking recruitment exams.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> IBPS PO / Clerk</li>
+                            <li><i class="fas fa-check"></i> SBI PO / Clerk</li>
+                            <li><i class="fas fa-check"></i> RBI Assistant</li>
+                            <li><i class="fas fa-check"></i> Banking Foundation</li>
+                        </ul>
+                        <a href="#" class="course-btn" onclick="openModal(); return false;">Enquire Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="course-body">
+                        <h3>SSC Coaching</h3>
+                        <p>Targeted training for Staff Selection Commission examinations.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> SSC CGL</li>
+                            <li><i class="fas fa-check"></i> SSC CHSL</li>
+                            <li><i class="fas fa-check"></i> SSC MTS / CPO</li>
+                            <li><i class="fas fa-check"></i> SSC GD</li>
+                        </ul>
+                        <a href="#" class="course-btn" onclick="openModal(); return false;">Enquire Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon"><i class="fas fa-train"></i></div>
+                    <div class="course-body">
+                        <h3>Railway Exams</h3>
+                        <p>Focused coaching for Railway Recruitment Board exams.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> RRB NTPC</li>
+                            <li><i class="fas fa-check"></i> RRB Group D</li>
+                            <li><i class="fas fa-check"></i> RRB ALP</li>
+                            <li><i class="fas fa-check"></i> Railway Foundation</li>
+                        </ul>
+                        <a href="#" class="course-btn" onclick="openModal(); return false;">Enquire Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon"><i class="fas fa-briefcase"></i></div>
+                    <div class="course-body">
+                        <h3>Other Competitive Exams</h3>
+                        <p>Preparation for state & other government job exams.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> State Govt. Jobs</li>
+                            <li><i class="fas fa-check"></i> Teaching Exams (CTET/STET)</li>
+                            <li><i class="fas fa-check"></i> Public Sector Jobs</li>
+                            <li><i class="fas fa-check"></i> Foundation Courses</li>
+                        </ul>
+                        <a href="#" class="course-btn" onclick="openModal(); return false;">Enquire Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">CAMPUS LIFE</span>
+                <h2>Gallery</h2>
+                <p>Moments of learning, celebration and success at ZSVTC</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/41013844_2159377021007513_8738274507476697088_n.jpg" alt="Students Celebration">
+                    <div class="gallery-overlay"><span>Students Celebration</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/69720367_2394655310813015_8249081078241820672_n.jpg" alt="Institute Function">
+                    <div class="gallery-overlay"><span>Institute Function</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/70383654_2394653754146504_5973539402603823104_n.jpg" alt="Guest Lecture">
+                    <div class="gallery-overlay"><span>Motivational Session</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/unnamed (1).webp" alt="Teacher's Day">
+                    <div class="gallery-overlay"><span>Teacher's Day Celebration</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/unnamed (3).webp" alt="Classroom Teaching">
+                    <div class="gallery-overlay"><span>Interactive Classroom</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/unnamed (4).webp" alt="Problem Solving Session">
+                    <div class="gallery-overlay"><span>Problem Solving Session</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NEWS ========== -->
+    <section id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">MEDIA COVERAGE</span>
+                <h2>Institute in News</h2>
+                <p>Our achievements recognized by leading newspapers</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <img src="images/New Paper.jpg" alt="Newspaper Coverage - Shailendra Vijay">
+                    <div class="news-body">
+                        <div class="news-date">Dainik Jagran</div>
+                        <h3>नौकरी छोड़ शैलेंद्र औरों को कर रहे तैयार</h3>
+                        <p>Shailendra Vijay left his Sub-Auditor job in 1996 to prepare students for high posts including IPS, IAS and banking services. Featured for his dedication to free education for district students.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/News Paper.jpg" alt="Newspaper - 41 Students Success">
+                    <div class="news-body">
+                        <div class="news-date">Prabhat Khabar</div>
+                        <h3>41 छात्रों को मिली सफलता – बैंकिंग प्रतियोगिता में बाजी मारी</h3>
+                        <p>41 students from SVTC Jamalpur selected for clerical posts in 19 banks across India through IBPS examination. Director Shailendra Vijay credited for quality coaching.</p>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="images/News Paper 3.jpg" alt="Munger Students Shine">
+                    <div class="news-body">
+                        <div class="news-date">English Daily</div>
+                        <h3>Munger students shine in bank exams</h3>
+                        <p>About 41 of the 50 students who studied at the SVTC centre at Jamalpur were declared successful for clerical posts in 19 banks across India.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">GET IN TOUCH</span>
+                <h2>Admission Enquiry</h2>
+                <p>Take the first step towards your government job dream</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Khanjarpur, Bhagalpur, Bihar 812001<br>(Near Jamalpur / Munger region)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p><a href="tel:+919801365120">+91 98013 65120</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/919801365120" target="_blank">Chat with us on WhatsApp</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fab fa-facebook-f"></i></div>
+                        <div>
+                            <h4>Facebook</h4>
+                            <p><a href="https://www.facebook.com/ZSVTC/" target="_blank">facebook.com/ZSVTC</a></p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/ZSVTC/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/919801365120" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:+919801365120" title="Call"><i class="fas fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Enquiry</h3>
+                    <form id="enquiryForm" onsubmit="submitForm(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name *</label>
+                                <input type="text" name="name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number *</label>
+                                <input type="tel" name="phone" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email (Optional)</label>
+                            <input type="email" name="email" placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Interested Course *</label>
+                            <select name="course" required>
+                                <option value="">Select Course</option>
+                                <option value="Banking">Banking Exams (IBPS/SBI)</option>
+                                <option value="SSC">SSC Coaching</option>
+                                <option value="Railway">Railway Exams</option>
+                                <option value="Other">Other Competitive Exams</option>
+                                <option value="Foundation">Foundation Course</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" rows="3" placeholder="Any specific query or preferred batch timing..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            <i class="fas fa-paper-plane"></i> Submit Enquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== GOOGLE MAP ========== -->
+    <section class="map-section" id="location">
+        <div style="background: #1a1a2e; color: white; text-align: center; padding: 28px 20px 10px;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 6px;">Our Location</h2>
+            <p style="opacity: 0.85; font-size: 1rem;">ZSVTC – An Unparallel Institute, Khanjarpur, Bhagalpur, Bihar 812001</p>
+        </div>
+        <div class="map-container">
+            <iframe 
+                src="https://maps.google.com/maps?q=ZSVTC+An+Unparallel+Institute+Khanjarpur+Bhagalpur+Bihar&t=&z=16&ie=UTF8&iwloc=B&output=embed"
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="ZSVTC An Unparallel Institute - Khanjarpur, Bhagalpur">
+            </iframe>
+        </div>
+        <div style="background: #1a1a2e; color: white; text-align: center; padding: 16px 20px 24px; font-size: 0.95rem;">
+            <p style="margin-bottom: 8px;"><i class="fas fa-map-marker-alt" style="color: #c8102e;"></i> <strong>Address:</strong> Khanjarpur, Bhagalpur, Bihar 812001</p>
+            <p><i class="fas fa-phone-alt" style="color: #c8102e;"></i> <strong>Call:</strong> <a href="tel:+919801365120" style="color: #ffd700; text-decoration: none;">+91 98013 65120</a> &nbsp;|&nbsp; 
+            <a href="https://www.google.com/maps/search/?api=1&query=ZSVTC+An+Unparallel+Institute+Khanjarpur+Bhagalpur" target="_blank" style="color: #ffd700; text-decoration: none;"><i class="fas fa-directions"></i> Get Directions</a></p>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="images/Red White Black Competition Center Logo.png" alt="ZSVTC Logo">
+                <p>ZSVTC – An Unparallel Institute. Empowering students of Bhagalpur, Munger & surrounding regions to achieve their dreams of government service through quality coaching and dedicated mentorship.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#founder">Founder</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Courses</h4>
+                <ul>
+                    <li><a href="#courses">Banking Exams</a></li>
+                    <li><a href="#courses">SSC Coaching</a></li>
+                    <li><a href="#courses">Railway Exams</a></li>
+                    <li><a href="#courses">Other Exams</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+919801365120">+91 98013 65120</a></li>
+                    <li><a href="https://wa.me/919801365120" target="_blank">WhatsApp Us</a></li>
+                    <li><a href="https://www.facebook.com/ZSVTC/" target="_blank">Facebook</a></li>
+                    <li><a href="#contact">Send Enquiry</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024–2026 ZSVTC – An Unparallel Institute. All Rights Reserved.</p>
+            <p>Founded by Shailendra Vijay | M.Sc. Electronics</p>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING WHATSAPP ========== -->
+    <a href="https://wa.me/919801365120?text=Hello%20ZSVTC%2C%20I%20am%20interested%20in%20admission%20enquiry." 
+       class="whatsapp-float" 
+       target="_blank" 
+       title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ========== POPUP MODAL ========== -->
+    <div class="modal-overlay" id="enquiryModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h3>Admission Enquiry</h3>
+            <p>Fill the form below and we will get back to you shortly.</p>
+            <form id="modalForm" onsubmit="submitModalForm(event)">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number *</label>
+                    <input type="tel" name="phone" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+                </div>
+                <div class="form-group">
+                    <label>Interested Course *</label>
+                    <select name="course" required>
+                        <option value="">Select Course</option>
+                        <option value="Banking">Banking Exams (IBPS/SBI)</option>
+                        <option value="SSC">SSC Coaching</option>
+                        <option value="Railway">Railway Exams</option>
+                        <option value="Other">Other Competitive Exams</option>
+                        <option value="Foundation">Foundation Course</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Message (Optional)</label>
+                    <textarea name="message" rows="2" placeholder="Any specific query..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    <i class="fas fa-paper-plane"></i> Submit Enquiry
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getHeader || document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+
+        // Close menu on link click
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('nav-menu').classList.remove('active');
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) {
+                    a.classList.add('active');
+                }
+            });
+        });
+
+        // Modal functions
+        function openModal() {
+            document.getElementById('enquiryModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('enquiryModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on overlay click
+        document.getElementById('enquiryModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('enquiryModal')) {
+                closeModal();
+            }
+        });
+
+        // Form submissions (demo - shows alert and can be connected to backend)
+        function submitForm(e) {
+            e.preventDefault();
+            const form = e.target;
+            const name = form.name.value;
+            const phone = form.phone.value;
+            const course = form.course.value;
+            
+            // In production, send to backend or Google Form / WhatsApp
+            const message = `Hello ZSVTC!%0A%0AName: ${name}%0APhone: ${phone}%0ACourse: ${course}%0A%0AI am interested in admission.`;
+            window.open(`https://wa.me/919801365120?text=${message}`, '_blank');
+            
+            alert('Thank you! Your enquiry has been prepared. Please send the WhatsApp message to complete.');
+            form.reset();
+        }
+
+        function submitModalForm(e) {
+            e.preventDefault();
+            const form = e.target;
+            const name = form.name.value;
+            const phone = form.phone.value;
+            const course = form.course.value;
+            
+            const message = `Hello ZSVTC!%0A%0AName: ${name}%0APhone: ${phone}%0ACourse: ${course}%0A%0AI am interested in admission.`;
+            window.open(`https://wa.me/919801365120?text=${message}`, '_blank');
+            
+            alert('Thank you! Your enquiry has been prepared. Please send the WhatsApp message to complete.');
+            form.reset();
+            closeModal();
+        }
+
+        // Auto-open enquiry popup on first page load
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                openModal();
+            }, 1500); // opens 1.5 seconds after page loads
+        });
+    </script>
+</body>
+</html>
